@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Consultora de Software especializada en soluciones médicas. Sistemas eficientes que se adaptan a su negocio."
+    />
+    <meta name="keywords" content="sistemas, software, soluciones, programas" />
+    <title>BIOSOFT</title>
+    <link rel="icon" type="image/x-icon" href="./img/logotipo.svg" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./scss/main.scss" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="navbar">
+          <div class="navbar__left">
+            <button id="btnMenu">
+              <img
+                id="openMenu"
+                class="active"
+                src="./img/menu.svg"
+                alt="Abrir menú"
+              />
+              <img id="closeMenu" src="./img/times.svg" alt="Cerrar Menú" />
+            </button>
+            <picture>
+              <a href="./index.html">
+                <img
+                  src="./img/logotipo.svg"
+                  alt="Logotipo de la marca BIOSOFT"
+                  class="navbar-logo"
+                />
+              </a>
+            </picture>
+
+            <nav class="navbar__nav" id="nav">
+              <a class="nav__link" href="#services">Servicios</a>
+              <a class="nav__link" href="#about">Nosotros</a>
+              <a class="nav__link" href="#contact">Contacto</a>
+            </nav>
+          </div>
+          <a
+            type="button"
+            href="mailto:administracion1@biosoft-online.net"
+            class="btn-main"
+            >Contacto</a
+          >
+        </div>
+        <section class="intro">
+          <div class="intro__top">
+            <div
+              class="intro__content"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+            >
+              <h1 class="intro__title">
+                <span class="title-underline">Soluciones</span>
+                <span>médicas</span>
+              </h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut,
+                aliquid.
+              </p>
+              <a type="button" class="btn-secondary" href="#services"
+                >Conocénos</a
+              >
+            </div>
+            <div
+              class="intro__img"
+              data-aos="fade-left"
+              data-aos-duration="1000"
+            >
+              <img
+                src="./img/intro-img.svg"
+                alt="Tres personas opinando y debatiendo sobre un proyecto"
+              />
+            </div>
+          </div>
+
+          <div
+            class="intro__bottom"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <a href="#services" aria-label="scroll to services">
+              <i class="fa-solid fa-angle-down"></i>
+              <i class="fa-solid fa-angle-down"></i>
+            </a>
+          </div>
+        </section>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <div
+          class="phrase phrase-right"
+          data-aos="fade-left"
+          data-aos-duration="1000"
+        >
+          <p>La Consultora de Software en la que confiar.</p>
+          <p>
+            Soluciones <strong>eficientes</strong> y
+            <strong>funcionales</strong> que se adaptan a su negocio.
+          </p>
+        </div>
+      </div>
+
+      <section id="services" class="services">
+        <div class="container">
+          <div
+            class="section__title"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+          >
+            <h2 class="title-back">SERVICIOS</h2>
+            <h3 class="title-front">
+              <span>Nuestros</span>
+              <span>SERVICIOS</span>
+            </h3>
+          </div>
+
+          <div
+            class="services__list"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <div class="service active">
+              <div class="service__header">
+                <div class="service__header__top">
+                  <i class="fa-solid fa-desktop"></i>
+                  <div class="service__title">
+                    <h4>Sistemas de ESCRITORIO</h4>
+                    <span class="title-separator"></span>
+                  </div>
+                </div>
+                <p>
+                  Aplicaciones locales a medidas, preparadas para trabajar
+                  offline u online de la manera más eficiente, empleando las
+                  mejores herramientas y prácticas.
+                </p>
+              </div>
+
+              <div class="service__features">
+                <div class="feature">
+                  <p><span>100%</span> personalizados</p>
+                  <i class="fa-solid fa-brush"></i>
+                </div>
+                <div class="feature">
+                  <p><span>FULL</span> responsivos</p>
+                  <div>
+                    <i class="fa-solid fa-laptop"></i>
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                  </div>
+                </div>
+                <div class="feature">
+                  <p><span>ALTA</span> performance</p>
+                  <i class="fa-solid fa-bolt"></i>
+                </div>
+                <div class="feature">
+                  <p><span>HOSTING</span> incluído</p>
+                  <i class="fa-solid fa-house"></i>
+                </div>
+              </div>
+              <div class="toggle-service">
+                <i id="show-service" class="fa-solid fa-angle-up"></i>
+                <i id="hide-service" class="fa-solid fa-angle-down"></i>
+              </div>
+            </div>
+            <div class="service active">
+              <div class="service__header">
+                <div class="service__header__top">
+                  <i class="fa-solid fa-globe"></i>
+                  <div class="service__title">
+                    <h4>Sistemas WEB</h4>
+                    <span class="title-separator"></span>
+                  </div>
+                </div>
+                <p>
+                  Aplicaciones web eficientes y personalizadas, a las cuáles
+                  podrás acceder desde cualquier dispositivo con conexión a
+                  internet, sin necesidad de instalación.
+                </p>
+              </div>
+
+              <div class="service__features">
+                <div class="feature">
+                  <p><span>100%</span> personalizados</p>
+                  <i class="fa-solid fa-brush"></i>
+                </div>
+                <div class="feature">
+                  <p><span>FULL</span> responsivos</p>
+                  <div>
+                    <i class="fa-solid fa-laptop"></i>
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                  </div>
+                </div>
+                <div class="feature">
+                  <p><span>ALTA</span> performance</p>
+                  <i class="fa-solid fa-bolt"></i>
+                </div>
+                <div class="feature">
+                  <p><span>HOSTING</span> incluído</p>
+                  <i class="fa-solid fa-house"></i>
+                </div>
+                <div class="feature">
+                  <p><span>HOSTING</span> incluído</p>
+                  <i class="fa-solid fa-house"></i>
+                </div>
+                <div class="feature">
+                  <p><span>HOSTING</span> incluído</p>
+                  <i class="fa-solid fa-house"></i>
+                </div>
+                <div class="feature">
+                  <p><span>HOSTING</span> incluído</p>
+                  <i class="fa-solid fa-house"></i>
+                </div>
+              </div>
+              <div class="toggle-service">
+                <i id="show-service" class="fa-solid fa-angle-up"></i>
+                <i id="hide-service" class="fa-solid fa-angle-down"></i>
+              </div>
+            </div>
+            <div class="service active">
+              <div class="service__header">
+                <div class="service__header__top">
+                  <i class="fa-solid fa-file"></i>
+                  <div class="service__title">
+                    <h4>Transmisiones PAMI</h4>
+                    <span class="title-separator"></span>
+                  </div>
+                </div>
+                <p>
+                  A través de un minucioso trabajo de análisis y procesamiento
+                  de archivos, brindamos una completa eficiencia y rentabilidad
+                  a nuestros prestadores.
+                </p>
+              </div>
+
+              <div class="service__features">
+                <div class="feature">
+                  <p><span>100%</span> personalizados</p>
+                  <i class="fa-solid fa-brush"></i>
+                </div>
+                <div class="feature">
+                  <p><span>FULL</span> responsivos</p>
+                  <div>
+                    <i class="fa-solid fa-laptop"></i>
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                  </div>
+                </div>
+                <div class="feature">
+                  <p><span>ALTA</span> performance</p>
+                  <i class="fa-solid fa-bolt"></i>
+                </div>
+                <div class="feature">
+                  <p><span>HOSTING</span> incluído</p>
+                  <i class="fa-solid fa-house"></i>
+                </div>
+              </div>
+              <div class="toggle-service">
+                <i id="show-service" class="fa-solid fa-angle-up"></i>
+                <i id="hide-service" class="fa-solid fa-angle-down"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="container">
+        <div class="phrase" data-aos="fade-right" data-aos-duration="1000">
+          <p>
+            Lorem ipsum dolor, sit amet <strong>consectetur</strong> adipisicing
+            elit. Iure molestias quas alias eos quia.
+          </p>
+          <p>
+            Necessitatibus, corporis in? Corporis velit,
+            <strong>accusantium</strong> quod veritatis maiores.
+          </p>
+        </div>
+      </div>
+
+      <div class="container idea">
+        <h3 data-aos="zoom-in" data-aos-duration="1000">
+          <span class="text-primary">¡</span> Contános tu
+          <span class="text-primary">idea</span>
+          <span class="text-wrap"
+            >y la llevamos a cabo <span class="text-primary">!</span></span
+          >
+        </h3>
+        <picture
+          class="img-rocket"
+          data-aos="fade-left"
+          data-aos-duration="1000"
+        >
+          <img src="./img/img-rocket.svg" alt="" />
+        </picture>
+      </div>
+
+      <section id="about" class="about">
+        <div class="container">
+          <div
+            class="section__title"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+          >
+            <h2 class="title-back">NOSOTROS</h2>
+            <h3 class="title-front">
+              <span>¿Por qué</span>
+              <span>ELEGIRNOS?</span>
+            </h3>
+          </div>
+
+          <div class="about__list">
+            <div
+              class="about__card"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+            >
+              <i class="fa-solid fa-calendar"></i>
+              <h4>+15 años</h4>
+              <p>de trayectoria en el rubro</p>
+            </div>
+            <div
+              class="about__card"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
+              <i class="fa-solid fa-user-shield"></i>
+              <h4>+50 clientes</h4>
+              <p>fidelizados a lo largo del tiempo</p>
+            </div>
+            <div
+              class="about__card"
+              data-aos="fade-left"
+              data-aos-duration="1000"
+            >
+              <i class="fa-solid fa-calendar"></i>
+              <h4>+15 años</h4>
+              <p>de trayectoria en el rubro</p>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="about__quotes">
+            <div
+              class="quote"
+              data-aos="fade-up-right"
+              data-aos-duration="1000"
+            >
+              <div class="quote__header">
+                <div class="quote__header__img">
+                  <img src="./img/testimonials-user.svg" alt="" />
+                </div>
+                <div class="quote__header__client">
+                  <p>CLISAMEN UTE</p>
+                  <span>Mendoza</span>
+                </div>
+              </div>
+              <div class="quote__text">
+                <p>
+                  “Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Alias officiis iusto amet corrupti nesciunt iste vel ad, nihil
+                  voluptatum”
+                </p>
+              </div>
+            </div>
+            <div class="quote" data-aos="fade-up-left" data-aos-duration="1000">
+              <div class="quote__header">
+                <div class="quote__header__img">
+                  <img src="./img/testimonials-user.svg" alt="" />
+                </div>
+                <div class="quote__header__client">
+                  <p>FED. BIOQ. PROV. CBA</p>
+                  <span>Córdoba</span>
+                </div>
+              </div>
+              <div class="quote__text">
+                <p>
+                  “Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Alias officiis iusto amet corrupti nesciunt iste vel ad, nihil
+                  voluptatum”
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="container">
+        <div
+          class="phrase phrase-right"
+          data-aos="fade-left"
+          data-aos-duration="1000"
+        >
+          <p>La Consultora de Software en la que confiar.</p>
+          <p>
+            Soluciones <strong>eficientes</strong> y
+            <strong>funcionales</strong> que se adaptan a su negocio.
+          </p>
+        </div>
+      </div>
+
+      <section id="contact" class="contact">
+        <div class="container">
+          <div
+            class="section__title"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+          >
+            <h2 class="title-back">CONTACTO</h2>
+            <h3 class="title-front">
+              <span>Dejános tu</span>
+              <span>MENSAJE</span>
+            </h3>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="container contact__top">
+            <div class="ready">
+              <div data-aos="fade-right" data-aos-duration="1000">
+                <h4>
+                  ¿Listo para <span class="text-primary">trabajar</span> con
+                  nosotros?
+                </h4>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure
+                  reprehenderit delectus
+                </p>
+              </div>
+              <div
+                class="flex-column"
+                data-aos="fade-left"
+                data-aos-duration="1000"
+              >
+                <a
+                  href="mailto:administracion1@biosoft-online.net"
+                  aria-label="Email"
+                >
+                  <i class="fa-solid fa-square-envelope"></i
+                ></a>
+                <a href="tel:+543576412036" aria-label="Teléfono"
+                  ><i class="fa-solid fa-square-phone"></i
+                ></a>
+              </div>
+            </div>
+            <!-- <h5>¡Escribínos! <i class="fa-solid fa-angle-down"></i></h5> -->
+          </div>
+        </div>
+        <div
+          class="form__container"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          <form
+            id="formContact"
+            action="https://formsubmit.co/c1db87548f12b349f01d66aab4d11721"
+            method="post"
+            class="contact__form"
+          >
+            <input
+              class="contact__input"
+              type="name"
+              name="name"
+              id="name"
+              placeholder="Nombre / Empresa"
+              required
+            />
+            <input
+              class="contact__input"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email"
+              required
+            />
+            <textarea
+              class="contact__input"
+              name="message"
+              id="message"
+              placeholder="Mensaje"
+              rows="8"
+              required
+            ></textarea>
+
+            <button type="submit" class="btn-main" id="btnSend">Enviar</button>
+
+            <!--Config FormSubmit-->
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="box" />
+            <input type="hidden" name="_subject" id="subject" />
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <div class="container-fluid waves">
+      <img src="./img/waves-footer.svg" alt="Olas de varios tonos de naranja" />
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <div
+          class="footer__info"
+          data-aos="fade-right"
+          data-aos-duration="1000"
+        >
+          <a
+            href="./index.html"
+            aria-label="Navegar a la página de Inicio"
+            class="footer-icon"
+            ><i class="fas fa-home"></i
+          ></a>
+
+          <a
+            href="mailto:administracion1@biosoft-online.net"
+            aria-label="Enviar correo"
+            >administracion1@biosoft-online.net</a
+          >
+          <a href="./index.html" aria-label="Navegar a la página de Inicio">
+            <img
+              src="./img/logotipo-blanco.svg"
+              alt="Logotipo de la marca BIOSOFT en color blanco"
+          /></a>
+
+          <nav class="footer__links">
+            <a href="#services">Servicios</a>
+            <a href="#about">Nosotros</a>
+            <a href="#contact">Contacto</a>
+          </nav>
+
+          <a
+            href="#"
+            aria-label="Ir al comienzo de la página"
+            class="footer-icon"
+            ><i class="fas fa-arrow-up"></i
+          ></a>
+        </div>
+        <div
+          class="footer__social"
+          data-aos="zoom-out"
+          data-aos-duration="1000"
+        >
+          <a
+            href="https://www.facebook.com"
+            class="fab fa-facebook"
+            target="_blank"
+            aria-label="Facebook"
+          ></a>
+          <a
+            href="https://www.twitter.com"
+            class="fab fa-twitter"
+            target="_blank"
+            aria-label="Twitter"
+          ></a>
+          <a type="button" class="fa fa-share" id="share"
+            ><span id="tooltip">Link Copiado!</span></a
+          >
+        </div>
+        <p>&copy; 2005 — <span id="yearRights"></span> | Derechos Reservados</p>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

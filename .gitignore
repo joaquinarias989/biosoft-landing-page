@@ -1,0 +1,15 @@
+node_modules
+dist
+cache
+
+# Editor directories, files and cache
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.cache

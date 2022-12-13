@@ -1,0 +1,92 @@
+.container {
+  width: 100%;
+  max-width: 135rem;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0 5rem;
+
+  @include breakpoint(lg) {
+    padding: 0 1.5rem;
+  }
+}
+.container-fluid {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.d-flex {
+  display: flex;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+//Buttons
+
+.btn-main {
+  background-image: $bg-gradient-btn;
+  color: $white;
+  text-align: center;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 7px 7px 0 rgba(235, 109, 7, 0.2);
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    color: $primary;
+    box-shadow: 5px 5px 0 rgba(235, 109, 7, 0.2);
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 0.2rem solid $primary;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+    z-index: -1;
+  }
+  &:hover::before {
+    opacity: 1;
+  }
+}
+.btn-secondary {
+  text-align: center;
+  padding: 1rem 2rem;
+  border: 0.2rem solid $primary;
+  border-radius: 0.5rem;
+  box-shadow: 7px 7px 0 rgb(235, 109, 7, 0.2);
+  backdrop-filter: blur(1rem);
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  font-weight: 600;
+
+  &:hover {
+    color: $white;
+    box-shadow: 5px 5px 0 rgb(235, 109, 7, 0.2);
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: $bg-gradient;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: -1;
+  }
+  &:hover::before {
+    opacity: 1;
+  }
+}
+
+.text-wrap {
+  display: block;
+}
+.text-primary {
+  color: $primary;
+}

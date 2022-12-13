@@ -1,0 +1,26 @@
+$primary: #eb6d07;
+$accent: #00598a;
+$black: #2f2f2f;
+$white: #ffffff;
+$muted: #6c6c6c;
+$grey: #cdcdcd;
+$light-color: #fafafa;
+$bg-gradient: linear-gradient(
+  270deg,
+  #eb6d07 0%,
+  rgba(235, 109, 7, 0.1) 99.99%,
+  rgba(235, 109, 7, 0) 100%
+);
+$bg-gradient-btn: linear-gradient(
+  263.56deg,
+  #eb6d07 42.83%,
+  rgba(235, 109, 7, 0.35) 99.07%
+);
+$border-rounded: 5px;
+$box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.25);
+
+$breakpoints: (
+  sm: 425px,
+  md: 767px,
+  lg: 992px,
+);

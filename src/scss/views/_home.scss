@@ -1,0 +1,532 @@
+main {
+  .container {
+    padding: 5rem 5rem;
+    overflow: visible;
+    @include breakpoint(lg) {
+      padding: 5rem 1.5rem;
+    }
+    @include breakpoint(md) {
+      overflow: hidden;
+    }
+  }
+
+  > div:nth-child(1) > div {
+    margin-top: 5rem;
+  }
+
+  .services {
+    padding-bottom: 3rem;
+
+    &__list {
+      @include flex(null, space-between, null, 3rem);
+
+      @include breakpoint(lg) {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .service {
+        background: $white;
+        box-shadow: $box-shadow;
+        border-radius: $border-rounded;
+        width: clamp(30rem, calc(135rem / 3), 100%);
+        padding: 3rem;
+        border-bottom: 0.9rem solid $primary;
+        position: relative;
+        overflow: hidden;
+        user-select: none;
+        transition: height 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+        @include breakpoint(sm) {
+          padding: 3rem 2.5rem;
+        }
+
+        &__header {
+          &__top {
+            @include flex(null, null, center, 2rem);
+            padding-bottom: 3rem;
+
+            i {
+              font-size: 3rem;
+            }
+
+            .service__title {
+              font-size: 1.9rem;
+              width: 100%;
+
+              h4 {
+                margin-bottom: 0.7rem;
+              }
+              .title-separator {
+                content: "";
+                display: block;
+                position: relative;
+                bottom: 0;
+                left: 0;
+                background: $primary;
+                width: 5rem;
+                height: 0.4rem;
+                border-radius: 2px;
+                transition: width 0.3s ease-in-out;
+              }
+            }
+          }
+
+          > p {
+            // padding: 3rem 0;
+            font-weight: 500;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 5;
+            overflow: hidden;
+            transition: all 0.3s ease-in-out;
+          }
+        }
+
+        &__features {
+          @include flex(column, space-between, null, 2rem);
+          padding: 3rem 0 2rem 0;
+          visibility: hidden;
+          opacity: 0;
+          transition: visibility 0.3s, opacity 0.3s linear, display 2s linear;
+
+          .feature {
+            @include flex(null, space-between, center, null);
+
+            p {
+              font-weight: 500;
+              span {
+                color: $primary;
+                display: block;
+                font-weight: 600;
+              }
+            }
+
+            i {
+              font-size: 2.4rem;
+            }
+
+            div {
+              i:first-child {
+                position: relative;
+                bottom: 0.3rem;
+                left: 0.2rem;
+                font-size: 2.1rem;
+              }
+              i:last-child {
+                position: relative;
+                top: 0.5rem;
+              }
+            }
+          }
+        }
+
+        .toggle-service i {
+          display: block;
+          position: absolute;
+          color: $primary;
+          font-size: 2.2rem;
+          bottom: 0.5rem;
+          left: 0;
+          right: 0;
+          text-align: center;
+          cursor: pointer;
+          transition: visibility 0s, opacity 0.5s linear;
+        }
+        #show-service {
+          visibility: hidden;
+          opacity: 0;
+        }
+
+        // &:hover:not(.active) {
+        //   max-height: 80rem;
+        //   transform: scale(1.05);
+        //   @include breakpoint(sm) {
+        //     transform: scale(1.03);
+        //   }
+
+        //   .title-separator {
+        //     width: 90%;
+        //   }
+
+        //   .service__features {
+        //     visibility: visible;
+        //     opacity: 1;
+        //   }
+
+        //   #show-service {
+        //     visibility: hidden;
+        //     opacity: 0;
+        //   }
+        //   #hide-service {
+        //     visibility: visible;
+        //     opacity: 1;
+        //   }
+        // }
+      }
+
+      .active {
+        height: fit-content;
+        transform: scale(1.05);
+        @include breakpoint(sm) {
+          transform: scale(1.03);
+        }
+
+        .service__header {
+          &__top {
+            .service__title {
+              .title-separator {
+                width: 90%;
+              }
+            }
+          }
+          > p {
+            -webkit-line-clamp: initial;
+          }
+        }
+
+        .service__features {
+          visibility: visible;
+          opacity: 1;
+        }
+
+        #show-service {
+          visibility: visible;
+          opacity: 1;
+        }
+        #hide-service {
+          visibility: hidden;
+          opacity: 0;
+        }
+      }
+    }
+  }
+
+  .idea {
+    @include flex(null, space-around, center, 3rem);
+    flex-wrap: wrap;
+
+    h3 {
+      font-size: clamp(2.8rem, 4vw, 4rem);
+      text-align: center;
+      position: relative;
+      padding-bottom: 2.5rem;
+      // transform: skewY(13deg);
+
+      .text-primary:nth-child(even) {
+        filter: drop-shadow(5px 5px 0px #eb6d0740)
+          drop-shadow(-5px -5px 0px #eb6d0730);
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        background-color: $primary;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 80%;
+        height: 0.5rem;
+        border-radius: $border-rounded;
+      }
+    }
+
+    .img-rocket {
+      img {
+        display: block;
+        max-width: 48rem;
+      }
+    }
+  }
+
+  .about {
+    padding-bottom: 3rem;
+
+    .section__title {
+      margin-bottom: 7rem;
+    }
+
+    &__list {
+      @include flex(null, space-evenly, center, 3rem);
+      flex-wrap: wrap;
+
+      @include breakpoint(md) {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5rem;
+      }
+
+      .about__card {
+        @include flex(column, center, center, 0.5rem);
+        text-align: center;
+        i {
+          font-size: 5rem;
+          margin-bottom: 1rem;
+        }
+        h4 {
+          font-size: 3.2rem;
+          position: relative;
+          padding: 0 3rem;
+
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: 0.2rem;
+            left: 0;
+            right: 0;
+            background: $bg-gradient;
+            width: 100%;
+            height: 1rem;
+            z-index: -1;
+          }
+        }
+      }
+    }
+
+    .container-fluid {
+      padding: 5.5rem 0;
+    }
+
+    &__quotes {
+      @include flex(null, center, center, 5rem);
+      padding: 0 2rem;
+      position: relative;
+
+      @include breakpoint(md) {
+        flex-direction: column;
+      }
+
+      .quote {
+        background: $white;
+        box-shadow: $box-shadow;
+        border-radius: $border-rounded;
+        max-width: calc((135rem / 3) - 5rem);
+        padding: 3rem;
+        border-bottom: 1rem solid $primary;
+        position: relative;
+
+        &__header {
+          @include flex(null, null, center, 2rem);
+          width: 100%;
+
+          &__img {
+            background: transparent;
+            img {
+              border-radius: 100%;
+              display: block;
+              max-width: 6rem;
+              box-shadow: 1px 5px 7px rgba(0, 0, 0, 0.2);
+            }
+          }
+
+          &__client {
+            p {
+              padding-bottom: 0.3rem;
+            }
+            span {
+              display: block;
+              color: $muted;
+              font-size: 1.6rem;
+            }
+          }
+        }
+
+        &__text {
+          padding: 3rem 0 2.5rem 0;
+
+          p {
+            font-style: italic;
+            text-align: center;
+            letter-spacing: 0.02rem;
+          }
+        }
+
+        &:first-child::before {
+          content: url(.././img/cmm.svg);
+          position: absolute;
+          top: -7.5rem;
+          left: -7rem;
+          font-size: 10rem;
+          font-style: italic;
+          font-weight: bold;
+
+          @include breakpoint(lg) {
+            left: -1rem;
+            top: -11rem;
+          }
+        }
+        &:last-child::after {
+          content: url(.././img/cmm.svg);
+          position: absolute;
+          bottom: -8rem;
+          right: -7.5rem;
+          font-size: 10rem;
+          font-style: italic;
+          font-weight: bold;
+          transform: rotate(180deg);
+
+          @include breakpoint(lg) {
+            right: -1rem;
+            bottom: -12rem;
+          }
+        }
+      }
+
+      &::before {
+        content: "TESTIMONIOS TESTIMONIOS ";
+        @include flex(row, center, center, null);
+        font-size: clamp(7.5rem, 8rem, 10vw);
+        white-space: nowrap;
+        letter-spacing: 0.5rem;
+        padding: 1rem 3rem;
+        position: absolute;
+        background: $primary;
+        width: 100%;
+        color: #ff8e32;
+        text-align: center;
+        z-index: -1;
+
+        @include breakpoint(md) {
+          white-space: normal;
+        }
+      }
+    }
+  }
+
+  .contact {
+    .section__title {
+      margin-bottom: 0;
+    }
+    .container-fluid {
+      background: url(.././img/contact-img.jpg) center center fixed;
+      background-size: cover;
+      background-repeat: space;
+
+      .contact__top {
+        @include flex(column, center, null, 2rem);
+        padding-bottom: 8rem;
+
+        .ready {
+          @include flex(null, space-between, center, 1rem);
+
+          h4 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 1rem;
+          }
+          .flex-column {
+            i {
+              color: $primary;
+              font-size: 4rem;
+              transition: color 0.2s ease-in-out;
+
+              &:hover {
+                color: #c25b07;
+              }
+            }
+          }
+        }
+
+        h5 {
+          color: $primary;
+          text-align: center;
+          font-size: clamp(2rem, 3vw, 2.2rem);
+          font-weight: 600;
+          i {
+            font-size: 2.5rem;
+            display: block;
+          }
+        }
+      }
+    }
+
+    .form__container {
+      padding: 0 1.5rem;
+
+      .contact__form {
+        background: $white;
+        box-shadow: $box-shadow;
+        border-radius: $border-rounded;
+        max-width: 90rem;
+        padding: 6.5rem 5.5rem;
+        margin: 0 auto;
+        top: -3rem;
+        position: relative;
+        z-index: 1000;
+
+        .contact__input {
+          display: block;
+          background: #fff8f1;
+          width: 100%;
+          padding: 1.2rem;
+          margin-bottom: 2.5rem;
+          border-left: 0.8rem solid $primary;
+          border-radius: 5px;
+          transition: outline-width 0.15s ease-in-out,
+            background 0.2s ease-in-out;
+
+          &::placeholder {
+            color: $black;
+          }
+          &:hover {
+            background: #ff8e3220;
+          }
+          &:focus {
+            border-width: 0;
+            outline: 0.3rem solid $primary;
+          }
+        }
+
+        .btn-main {
+          width: 100%;
+          padding: 1.25rem;
+          margin-top: 3rem;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: -3rem;
+          left: 10rem;
+          background-color: $primary;
+          width: 2rem;
+          height: 4.5rem;
+          border-radius: 0.2rem;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          top: -3rem;
+          right: 10rem;
+          background-color: $primary;
+          width: 2rem;
+          height: 4.5rem;
+          border-radius: 0.2rem;
+        }
+
+        @include breakpoint(md) {
+          padding: 6rem 4rem;
+        }
+        @include breakpoint(sm) {
+          padding: 5rem 3rem;
+
+          &::before {
+            left: 5rem;
+          }
+          &::after {
+            right: 5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.waves {
+  @include flex(column, center, center, null);
+  img {
+    display: block;
+    min-width: 80rem;
+  }
+}

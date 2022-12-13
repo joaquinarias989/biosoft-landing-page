@@ -1,0 +1,127 @@
+.footer {
+  background-color: $primary;
+  padding: 5rem 0;
+  letter-spacing: 0.03rem;
+
+  .container {
+    @include flex(column, center, center, 7rem);
+  }
+
+  a {
+    color: $white;
+  }
+
+  &__info {
+    @include flex(null, space-evenly, center, 1rem);
+    flex-wrap: wrap;
+    text-align: center;
+    position: relative;
+    padding-bottom: 2rem;
+    width: 100%;
+    font-weight: normal;
+
+    img {
+      max-width: 13rem;
+    }
+
+    .footer__links {
+      @include flex(null, center, center, 4.5rem);
+      flex-wrap: wrap;
+    }
+
+    .footer-icon {
+      position: absolute;
+      font-size: 2.7rem;
+      padding: 1rem;
+
+      &:hover {
+        color: rgb(255, 186, 126);
+      }
+      &:first-child {
+        left: -1rem;
+      }
+      &:last-child {
+        right: -1rem;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: relative;
+      top: 4.5rem;
+      width: 90%;
+      height: 0.25rem;
+      border-radius: 5px;
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    @include breakpoint(lg) {
+      flex-direction: column;
+      justify-content: center;
+      gap: 5rem;
+
+      .footer-icons {
+        flex-direction: column;
+        justify-content: center;
+        &:first-child {
+          left: 0;
+        }
+        &:last-child {
+          right: 0;
+        }
+      }
+
+      &::after {
+        top: 2rem;
+      }
+    }
+  }
+
+  &__social {
+    @include flex(null, center, null, 2rem);
+    flex-wrap: wrap;
+    font-size: clamp(3rem, 3.4rem, 4vw);
+
+    a {
+      padding: 1rem 2rem;
+
+      &:hover {
+        color: rgb(255, 225, 200);
+        animation: float 0.5s ease-in-out infinite alternate;
+      }
+
+      &#share {
+        position: relative;
+        cursor: pointer;
+
+        #tooltip {
+          background: $white;
+          color: $primary;
+          padding: 0.8rem;
+          position: absolute;
+          bottom: 3rem;
+          left: 7rem;
+          font-size: 1.65rem;
+          font-weight: 700;
+          border-radius: $border-rounded;
+          opacity: 0;
+          visibility: hidden;
+          transform-origin: bottom left;
+          transition: all 0.2s ease-in-out;
+          cursor: default;
+
+          &.active {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
+    }
+  }
+
+  p {
+    text-align: center;
+    color: $white;
+    font-weight: 500;
+  }
+}

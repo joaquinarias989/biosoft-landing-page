@@ -1,0 +1,15 @@
+@mixin breakpoint($size) {
+  @if map-has-key($breakpoints, $size) {
+    @media (max-width: #{map-get($breakpoints, $size)}) {
+      @content;
+    }
+  }
+}
+
+@mixin flex($direc, $jc, $algn, $gap) {
+  display: flex;
+  flex-direction: $direc;
+  justify-content: $jc;
+  align-items: $algn;
+  gap: $gap;
+}

@@ -1,0 +1,26 @@
+@import "./misc/variables";
+@import "./misc/mixins";
+@import "./misc/normalize";
+@import "./misc/helpers";
+@import "./partials/header";
+@import "./views/home";
+@import "./partials/phrase";
+@import "./partials/section-titles";
+@import "./partials/footer";
+
+@keyframes fly {
+  from {
+    transform: translateY(0.01em) scale(0.98);
+  }
+  to {
+    transform: translateY(-0.15em) scale(0.99);
+  }
+}
+@keyframes float {
+  from {
+    transform: translateY(0.08em);
+  }
+  to {
+    transform: translateY(-0.08em);
+  }
+}

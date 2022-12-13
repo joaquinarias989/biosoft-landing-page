@@ -1,0 +1,93 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,500;0,600;0,700;0,800;0,900;1,300&display=swap");
+
+// Normalize
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  vertical-align: baseline;
+  font-family: "Montserrat Alternates", sans-serif;
+
+  &::after,
+  &::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+  }
+}
+
+// Globals
+html {
+  font-size: 62.5%;
+  line-height: 1.15;
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
+  overflow-x: hidden;
+}
+body {
+  background-color: $light-color;
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  color: $black;
+  font-size: clamp(1.6rem, 1.65rem, 2vw);
+  font-weight: 600;
+  overflow-x: hidden;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+ul,
+ol {
+  list-style-type: none;
+}
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: $primary;
+  transition: color 0.2s ease-in-out;
+}
+strong {
+  color: $primary;
+}
+button {
+  background: none;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+//Forms
+input,
+select,
+textarea {
+  background: transparent;
+  font-size: inherit;
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus {
+    box-shadow: 0 0 0px 1000px #fff8f1 inset;
+  }
+}
+textarea {
+  resize: none;
+}
+
+//Scroll Bar
+::-webkit-scrollbar {
+  width: 0.5rem;
+  background: $light-color;
+  &-thumb {
+    background: $primary;
+    border-radius: 1px;
+    &:hover {
+      background: #e67d22bb;
+    }
+  }
+}
