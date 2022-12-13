@@ -59,7 +59,7 @@ main {
                 margin-bottom: 0.7rem;
               }
               .title-separator {
-                content: "";
+                content: '';
                 display: block;
                 position: relative;
                 bottom: 0;
@@ -220,7 +220,7 @@ main {
       }
 
       &::after {
-        content: "";
+        content: '';
         position: absolute;
         background-color: $primary;
         bottom: 0;
@@ -271,7 +271,7 @@ main {
           padding: 0 3rem;
 
           &::after {
-            content: "";
+            content: '';
             position: absolute;
             bottom: 0.2rem;
             left: 0;
@@ -344,7 +344,7 @@ main {
         }
 
         &:first-child::before {
-          content: url(.././img/cmm.svg);
+          content: url(../assets/img/cmm.svg);
           position: absolute;
           top: -7.5rem;
           left: -7rem;
@@ -358,7 +358,7 @@ main {
           }
         }
         &:last-child::after {
-          content: url(.././img/cmm.svg);
+          content: url(../assets/img/cmm.svg);
           position: absolute;
           bottom: -8rem;
           right: -7.5rem;
@@ -375,7 +375,7 @@ main {
       }
 
       &::before {
-        content: "TESTIMONIOS TESTIMONIOS ";
+        content: 'TESTIMONIOS TESTIMONIOS ';
         @include flex(row, center, center, null);
         font-size: clamp(7.5rem, 8rem, 10vw);
         white-space: nowrap;
@@ -400,7 +400,7 @@ main {
       margin-bottom: 0;
     }
     .container-fluid {
-      background: url(.././img/contact-img.jpg) center center fixed;
+      background: url(../assets/img/contact-img.jpg) center center fixed;
       background-size: cover;
       background-repeat: space;
 
@@ -485,7 +485,7 @@ main {
         }
 
         &::before {
-          content: "";
+          content: '';
           position: absolute;
           top: -3rem;
           left: 10rem;
@@ -495,7 +495,7 @@ main {
           border-radius: 0.2rem;
         }
         &::after {
-          content: "";
+          content: '';
           position: absolute;
           top: -3rem;
           right: 10rem;
